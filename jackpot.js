@@ -14,13 +14,13 @@ function developer() {
 }
 //ramdonナンバーを出す関数------------------------------------------------------------------------------
 function randomNumber1() {
-  const randomNum1 = Math.floor(Math.random() * level + 1);
+  const randomNum1 = Math.floor(Math.random() * levelCount + 1);
 //   image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/${randomNum1}.png`;
   image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${randomNum1}.png?raw=true`;
   return randomNum1;
 }
 function randomNumber2() {
-  const randomNum2 = Math.floor(Math.random() * level + 1);
+  const randomNum2 = Math.floor(Math.random() * levelCount + 1);
 //   image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/${randomNum2}.png`;
   image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${randomNum2}.png?raw=true`;
   return randomNum2;
@@ -49,16 +49,14 @@ function checkNumber() {
     image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${num1}.png?raw=true`;
     image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${num2}.png?raw=true`;
   }
-  console.log(num1,num2);
   num = num1 + num2;
   index1 = (arrayMaster.indexOf(num1));
   index2 = (arrayMaster.indexOf(num2));
   index3 = (arrayMaster.indexOf(num));
   const indexM = [index1,index2,index3];
-
   const numM = [num1,num2,num];
   if(index1 === -1 && index2 === -1 && index3 === -1) {
-    setTimeout(500);
+    setTimeout(1500);
     strNum.style.color = "red";
     strNum.innerText = "You lose!";
     setTimeout(gameSet, 750);
@@ -91,7 +89,6 @@ function clickNumber(event) {
     break;
     }
   }
-
   for (const value of obj) {
     value.style.backgroundColor = "rgb(128, 128, 128)";
     value.removeEventListener('click',clickNumber);
@@ -108,9 +105,6 @@ function clickNumber(event) {
     }
   }
   turnEnd();
-  console.log(index1,index2,index3)
-  console.log(obj);
-  console.log(arrayMaster);
 }
 //リセットの関数------------------------------------------------------------------------------
 function turnEnd() {
@@ -128,20 +122,75 @@ function turnEnd() {
     target.addEventListener("click",checkNumber);
   }
 }
-//普通の処理------------------------------------------------------------------------------
-const arrayMaster = [];
-const arrays = document.querySelector("#box").innerText;
-for (const key of arrays) {
-  if (key !== "\n") {
-    arrayMaster.push(Number(key));
+//モード選択の関数------------------------------------------------------------------------------
+function modeSelect(event) {
+  mode.style.display = "none";
+  main.style.display = "block";
+  if (event.srcElement.id === "mode1") {
+    level = 3;
+  } else if (event.srcElement.id === "mode2") {
+    level = 5;
+  } else if (event.srcElement.id === "mode3") {
+    level = 9;
   }
+  if (level > 5) {
+    levelCount = 6;
+  } else {
+    levelCount = level;
+  }
+  for (let i = 0 ; i < 9 - level ; i++) {
+    objMasterP[8 - i].style.display = "none";
+  }
+  if (level === 3) {
+    message.push("す");
+    message.push("て");
+    message.push("き");
+  } else if (level === 5) {
+    message.push("F");
+    message.push("N");
+    message.push("D");
+    message.push("1");
+    message.push("6");
+  } else if (level === 9) {
+    message.push("☆");
+    message.push("J");
+    message.push("A");
+    message.push("C");
+    message.push("K");
+    message.push("P");
+    message.push("O");
+    message.push("T");
+    message.push("☆");
+  }
+  for (let i = 0 ; i < level ; i++) {
+    obj.push(objMaster[i]);
+    objM.push(objMaster[i]);
+    arrayMaster.push(i + 1);
+  }
+  console.log(arrayMaster);
 }
-
+//普通の処理------------------------------------------------------------------------------
+const arrays = document.querySelector("#box").innerText;
+const main = document.querySelector("#main");
+const mode = document.querySelector("#mode");
 const one = document.querySelector("#one");
 const two = document.querySelector("#two");
 const three = document.querySelector("#three");
 const four = document.querySelector("#four");
 const five = document.querySelector("#five");
+const six = document.querySelector("#six");
+const seven = document.querySelector("#seven");
+const eight = document.querySelector("#eight");
+const nine = document.querySelector("#nine");
+const oneP = document.querySelector("#oneP");
+const twoP = document.querySelector("#twoP");
+const threeP = document.querySelector("#threeP");
+const fourP = document.querySelector("#fourP");
+const fiveP = document.querySelector("#fiveP");
+const sixP = document.querySelector("#sixP");
+const sevenP = document.querySelector("#sevenP");
+const eightP = document.querySelector("#eightP");
+const nineP = document.querySelector("#nineP");
 const strNum = document.querySelector("#numberBox");
 const strNum1 = document.querySelector("#number1");
 const strNum2 = document.querySelector("#number2");
@@ -149,8 +198,13 @@ const target = document.querySelector("#startCheck1");
 const targetDeveloper = document.querySelector("#developer");
 const image1 = document.querySelectorAll("img")[0];
 const image2 = document.querySelectorAll("img")[1];
-
-const array = [...arrayMaster];
+const mode1 = document.querySelector("#mode1");
+const mode2 = document.querySelector("#mode2");
+const mode3 = document.querySelector("#mode3");
+const displayStrNum1 = strNum1.style.display;
+const displayStrNum2 = strNum1.style.display;
+strNum1.style.display = "none";
+strNum2.style.display = "none";
 let num1; 
 let num2; 
 let num;
@@ -158,31 +212,16 @@ let index1;
 let index2;
 let index3;
 let count = 0;
-const displayStrNum1 = strNum1.style.display;
-const displayStrNum2 = strNum1.style.display;
-strNum1.style.display = "none";
-strNum2.style.display = "none";
-
-const objMaster = [one,two,three,four,five];
+let level = 0;
+let levelCount = 0;
+const arrayMaster = [];
+const objMasterP = [oneP,twoP,threeP,fourP,fiveP,sixP,sevenP,eightP,nineP];
+const objMaster = [one,two,three,four,five,six,seven,eight,nine];
 const obj = [];
 const objM = [];
-const level = 5
 const message = [];
-if (level === 3) {
-  message.push("す");
-  message.push("て");
-  message.push("き");
-} else if (level === 5) {
-  message.push("F");
-  message.push("N");
-  message.push("D");
-  message.push("1");
-  message.push("6");
-}
-for (let i = 0 ; i < level ; i++) {
-  obj.push(objMaster[i]);
-  objM.push(objMaster[i]);
-}
-
+mode1.addEventListener("click",modeSelect);
+mode2.addEventListener("click",modeSelect);
+mode3.addEventListener("click",modeSelect);
 target.addEventListener("click",checkNumber);
 targetDeveloper.addEventListener("click",developer);
