@@ -1,0 +1,245 @@
+/* 開発者モード------------------------------------------------------------------------------------------ */
+#developer {
+  height: 25px;
+  width: 25px;
+  background-color: pink;
+}
+/* サイコロ------------------------------------------------------------------------------------------ */
+#numberBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  height: 200px;
+  font-size: 400%;
+}
+/* サイコロ画像------------------------------------------------------------------------------------------ */
+#imageBox {
+  /* display: flex;
+  justify-content: space-evenly; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+#imageBoxM1 {
+  background-color: green;
+  width: 400px;
+  height: 200px;
+  display:flex;/*【最重要(必須)】フレックスコンテナの指定 */
+  justify-content:center;/*【重要】 (主軸に対して)子要素同士をどのような間隔で並べるかを指定するプロパティ */
+  align-items:center;/*flex-directionで並べる際に、交差軸に対して子要素同士をどのような間隔で並べるかを指定するプロパティ*/
+}
+#imageBoxM2 {
+  background-color: green;
+  width: 400px;
+  height: 200px;
+  display:flex;/*【最重要(必須)】フレックスコンテナの指定 */
+  justify-content:center;/*【重要】 (主軸に対して)子要素同士をどのような間隔で並べるかを指定するプロパティ */
+  align-items:center;/*flex-directionで並べる際に、交差軸に対して子要素同士をどのような間隔で並べるかを指定するプロパティ*/
+}
+/* startボタン------------------------------------------------------------------------------------------ */
+#space {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+}
+#startCheck {
+  display: flex;
+  justify-content: space-evenly;
+  height: 70px;
+}
+#startCheck1 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 200px;
+  font-weight: bold;
+  font-family: Meiryo UI;
+  font-size: 200%;
+}
+.massage {
+  font-family: Meiryo UI;
+  font-size: 170%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+  vertical-align: top;
+}
+/* 数字------------------------------------------------------------------------------------------ */
+#box {
+  display: flex;
+  justify-content: space-evenly;
+  height: 200px;
+}
+#One {
+  background-color: black;
+  width: 200px;
+  display:flex;/*【最重要(必須)】フレックスコンテナの指定 */
+  justify-content:center;/*【重要】 (主軸に対して)子要素同士をどのような間隔で並べるかを指定するプロパティ */
+  align-items:center;/*flex-directionで並べる際に、交差軸に対して子要素同士をどのような間隔で並べるかを指定するプロパティ*/
+}
+#one {
+  /* background-color: rgb(207, 141, 18); */
+  background-color: gray;
+  height: 70%;
+  width: 50%;
+  font-size: 400%;
+  color: wheat;
+  font-weight: bold;
+  font-family: fantasy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Two {
+  background-color: black;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#two {
+  background-color: gray;
+  height: 70%;
+  width: 50%;
+  font-size: 400%;
+  color: wheat;
+  font-weight: bold;
+  font-family: fantasy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Three {
+  background-color: black;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#three {
+  background-color: gray;
+  height: 70%;
+  width: 50%;
+  font-size: 400%;
+  color: wheat;
+  font-weight: bold;
+  font-family: fantasy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Four {
+  background-color: black;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#four {
+  background-color: gray;
+  height: 70%;
+  width: 50%;
+  font-size: 400%;
+  color: wheat;
+  font-weight: bold;
+  font-family: fantasy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Five {
+  background-color: black;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#five {
+  background-color: gray;
+  height: 70%;
+  width: 50%;
+  font-size: 400%;
+  color: wheat;
+  font-weight: bold;
+  font-family: fantasy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Six {
+  background-color: black;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Seven {
+  background-color: gray;
+  height: 70%;
+  width: 50%;
+  font-size: 400%;
+  color: wheat;
+  font-weight: bold;
+  font-family: fantasy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Three {
+  background-color: black;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#three {
+  background-color: gray;
+  height: 70%;
+  width: 50%;
+  font-size: 400%;
+  color: wheat;
+  font-weight: bold;
+  font-family: fantasy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Three {
+  background-color: black;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#three {
+  background-color: gray;
+  height: 70%;
+  width: 50%;
+  font-size: 400%;
+  color: wheat;
+  font-weight: bold;
+  font-family: fantasy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Three {
+  background-color: black;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#three {
+  background-color: gray;
+  height: 70%;
+  width: 50%;
+  font-size: 400%;
+  color: wheat;
+  font-weight: bold;
+  font-family: fantasy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
