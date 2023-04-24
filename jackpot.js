@@ -15,14 +15,14 @@ function developer() {
 //ramdonナンバーを出す関数------------------------------------------------------------------------------
 function randomNumber1() {
   const randomNum1 = Math.floor(Math.random() * level + 1);
-  // image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/${randomNum1}.png`;
-  image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${randomNum1}.png?raw=true`;
+  image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/${randomNum1}.png`;
+  // image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${randomNum1}.png?raw=true`;
   return randomNum1;
 }
 function randomNumber2() {
   const randomNum2 = Math.floor(Math.random() * level + 1);
-  // image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/${randomNum2}.png`;
-  image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${randomNum2}.png?raw=true`;
+  image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/${randomNum2}.png`;
+  // image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${randomNum2}.png?raw=true`;
   return randomNum2;
 }
 //GameSetの関数---------------------------------------------------------------------------------------
@@ -44,10 +44,11 @@ function checkNumber() {
   } else {
     num1 = Number(strNum1.value);
     num2 = Number(strNum2.value);
-    // image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/${num1}.png`;
-    // image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/${num2}.png`;
-    image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${num1}.png?raw=true`;
-    image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${num2}.png?raw=true`;
+    image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/${num1}.png`;
+    image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/${num2}.png`;
+    // image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${num1}.png?raw=true`;
+    // image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${num2}.png?raw=true`;
+  }
   console.log(num1,num2);
   num = num1 + num2;
   index1 = (arrayMaster.indexOf(num1));
@@ -115,11 +116,10 @@ function clickNumber(event) {
 function turnEnd() {
   strNum1.value = undefined;
   strNum2.value = undefined;
-  // image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/nomal.png`;
-  // image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/nomal.png`;
-  image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/nomal.png?raw=true`;
-  image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/nomal.png?raw=true`;
-}
+  image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/nomal.png`;
+  image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/nomal.png`;
+  // image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/nomal.png?raw=true`;
+  // image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/nomal.png?raw=true`;
   if (arrayMaster[0] === undefined) {
     strNum.style.color = "rgb(255, 215, 0)";
     strNum.innerText = "You win!";
@@ -183,9 +183,6 @@ for (let i = 0 ; i < level ; i++) {
   obj.push(objMaster[i]);
   objM.push(objMaster[i]);
 }
-console.log(message);
-
-
 
 target.addEventListener("click",checkNumber);
 targetDeveloper.addEventListener("click",developer);
