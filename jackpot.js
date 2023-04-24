@@ -14,13 +14,15 @@ function developer() {
 }
 //ramdonナンバーを出す関数------------------------------------------------------------------------------
 function randomNumber1() {
-  const randomNum1 = Math.floor(Math.random() * 3 + 1);
-  image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/${randomNum1}.png?raw=true`;
+  const randomNum1 = Math.floor(Math.random() * level + 1);
+  // image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/${randomNum1}.png`;
+  image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${randomNum1}.png?raw=true`;
   return randomNum1;
 }
 function randomNumber2() {
-  const randomNum2 = Math.floor(Math.random() * 3 + 1);
-  image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/${randomNum2}.png?raw=true`;
+  const randomNum2 = Math.floor(Math.random() * level + 1);
+  // image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/${randomNum2}.png`;
+  image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${randomNum2}.png?raw=true`;
   return randomNum2;
 }
 //GameSetの関数---------------------------------------------------------------------------------------
@@ -42,9 +44,10 @@ function checkNumber() {
   } else {
     num1 = Number(strNum1.value);
     num2 = Number(strNum2.value);
-    image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/${num1}.png`;
-    image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/${num2}.png`;
-  }
+    // image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/${num1}.png`;
+    // image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/${num2}.png`;
+    image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${num1}.png?raw=true`;
+    image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${num2}.png?raw=true`;
   console.log(num1,num2);
   num = num1 + num2;
   index1 = (arrayMaster.indexOf(num1));
@@ -56,7 +59,7 @@ function checkNumber() {
   if(index1 === -1 && index2 === -1 && index3 === -1) {
     setTimeout(500);
     strNum.style.color = "red";
-    strNum.innerText = "You Lose!";
+    strNum.innerText = "You lose!";
     setTimeout(gameSet, 750);
   } else {
     for (let i = 0 ; i < 3 ; i++) {
@@ -69,7 +72,7 @@ function checkNumber() {
 //ランダムナンバーに一致した数字を押せるようにする関数------------------------------------------------------------------------------
 function colorChenge(colorNum) {
   let color;
-  for (let i = 0 ; i < 3 ; i++) {
+  for (let i = 0 ; i < level ; i++) {
     if (colorNum === i + 1) {
     color = objM[i];
     }
@@ -81,7 +84,7 @@ function colorChenge(colorNum) {
 function clickNumber(event) {
   const result = event.target.innerText;
   let string;
-  for (let i = 0 ; i < 3 ; i++) {
+  for (let i = 0 ; i < level ; i++) {
     if (result == i + 1) {
     string = message[i];
     break;
@@ -112,11 +115,13 @@ function clickNumber(event) {
 function turnEnd() {
   strNum1.value = undefined;
   strNum2.value = undefined;
-  image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/nomal.png`;
-  image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/nomal.png`;
+  // image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/nomal.png`;
+  // image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/nomal.png`;
+  image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/nomal.png?raw=true`;
+  image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/nomal.png?raw=true`;
   if (arrayMaster[0] === undefined) {
     strNum.style.color = "rgb(255, 215, 0)";
-    strNum.innerText = "You Win!";
+    strNum.innerText = "You win!";
     setTimeout(gameSet, 750);
   } else {
     target.addEventListener("click",checkNumber);
@@ -134,6 +139,8 @@ for (const key of arrays) {
 const one = document.querySelector("#one");
 const two = document.querySelector("#two");
 const three = document.querySelector("#three");
+const four = document.querySelector("#four");
+const five = document.querySelector("#five");
 const strNum = document.querySelector("#numberBox");
 const strNum1 = document.querySelector("#number1");
 const strNum2 = document.querySelector("#number2");
@@ -155,8 +162,9 @@ const displayStrNum2 = strNum1.style.display;
 strNum1.style.display = "none";
 strNum2.style.display = "none";
 
-const obj = [one,two,three];
-const objM = [one,two,three];
+const objMaster = [one,two,three,four,five];
+const obj = [];
+const objM = [];
 const level = 5
 const message = [];
 if (level === 3) {
@@ -169,6 +177,10 @@ if (level === 3) {
   message.push("D");
   message.push("1");
   message.push("6");
+}
+for (let i = 0 ; i < level ; i++) {
+  obj.push(objMaster[i]);
+  objM.push(objMaster[i]);
 }
 console.log(message);
 
