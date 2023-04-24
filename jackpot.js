@@ -15,12 +15,12 @@ function developer() {
 //ramdonナンバーを出す関数------------------------------------------------------------------------------
 function randomNumber1() {
   const randomNum1 = Math.floor(Math.random() * 3 + 1);
-  image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/${randomNum1}.png`;
+  image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/${randomNum1}.png`;
   return randomNum1;
 }
 function randomNumber2() {
   const randomNum2 = Math.floor(Math.random() * 3 + 1);
-  image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/${randomNum2}.png`;
+  image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/${randomNum2}.png`;
   return randomNum2;
 }
 //GameSetの関数---------------------------------------------------------------------------------------
