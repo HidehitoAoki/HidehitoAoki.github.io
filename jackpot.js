@@ -119,6 +119,7 @@ function turnEnd() {
   // image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/nomal.png`;
   image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/nomal.png?raw=true`;
   image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/nomal.png?raw=true`;
+}
   if (arrayMaster[0] === undefined) {
     strNum.style.color = "rgb(255, 215, 0)";
     strNum.innerText = "You win!";
