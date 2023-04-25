@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang ="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,54 +8,66 @@
     <link rel="stylesheet" href="jackpot.CSS">
 </head>
 <body>
-    <div id= "mode">
-      <div id="title">じゃっくぽっと</div>
-      <input id="mode1" type="button" value="初級">
-      <input id="mode2" type="button" value="中級">
-      <input id="mode3" type="button" value="上級">
+    <div class="return">
+      <input id="return" type="button" value="メニューにもどる">
     </div>
-    <div id= "main">
-      <div id= "developer"></div>
-      <div id= "box">
-        <div id= "oneP">
-          <div id= "one">1</div>
+    <div id="mode">
+      <div id="title">🎲じゃっくぽっと🎲</div>
+      <div class="mode1">
+        <input id="mode1" type="button" value="初級">
+      </div>
+      <div class="mode2">
+        <input id="mode2" type="button" value="中級">
+      </div>
+      <div class="mode3">
+        <input id="mode3" type="button" value="上級">
+      </div>
+      <div class="rule">
+        <input id="rule" type="button" value="あそびかた">
+      </div>
+    </div>
+    <div id="main">
+      <div id="developer"></div>
+      <div id="box">
+        <div id="oneP">
+          <div id="one">1</div>
         </div>
-        <div id= "twoP">
-          <div id= "two">2</div>
+        <div id="twoP">
+          <div id="two">2</div>
         </div>
-        <div id= "threeP">
-          <div id= "three">3</div>
+        <div id="threeP">
+          <div id="three">3</div>
         </div>
-        <div id= "fourP">
-          <div id= "four">4</div>
+        <div id="fourP">
+          <div id="four">4</div>
         </div>
-        <div id= "fiveP">
-          <div id= "five">5</div>
+        <div id="fiveP">
+          <div id="five">5</div>
         </div>
-        <div id= "sixP">
-          <div id= "six">6</div>
+        <div id="sixP">
+          <div id="six">6</div>
         </div>
-        <div id= "sevenP">
-          <div id= "seven">7</div>
+        <div id="sevenP">
+          <div id="seven">7</div>
         </div>
-        <div id= "eightP">
-          <div id= "eight">8</div>
+        <div id="eightP">
+          <div id="eight">8</div>
         </div>
-        <div id= "nineP">
-          <div id= "nine">9</div>
+        <div id="nineP">
+          <div id="nine">9</div>
         </div>
       </div>
-      <div id= "numberBox">
-        <p id= "numberBox1">
+      <div id="numberBox">
+        <p id="numberBox1">
           <input id="number1" type="number" min="1" max="6">
         </p>
         <p id= "numberBox2">
           <input id="number2" type="number" min="1" max="6">
         </p>
       </div>
-      <div id= "imageBox">
-        <div id= "imageBoxM1">
-          <p id= "imageBox1">
+      <div id="imageBox">
+        <div id="imageBoxM1">
+          <p id="imageBox1">
             <img src="https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/nomal.png?raw=true"; width="100" height="100"/>
           </p>
         </div>
@@ -68,12 +80,15 @@
       <div id="space">
         <p class="space"></p>
       </div>
-      <div id= "startCheck">
+      <div id="startCheck">
         <input id="startCheck1" type="button" value="Let's Go!">
       </div>
       <div id="massage">
         <p class="massage">ボタンを押すとサイコロが出てくるよ！</p>
       </div>
+    </div>
+    <div class="torisetu">
+      <img id="torisetu" src="https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/rule.png?raw=true" width="100" height="100"/>
     </div>
     <script src="jackpot.js" ></script>
 </body>
