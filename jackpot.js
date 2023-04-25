@@ -15,20 +15,18 @@ function developer() {
 //ramdonナンバーを出す関数------------------------------------------------------------------------------
 function randomNumber1() {
   const randomNum1 = Math.floor(Math.random() * levelCount + 1);
-//   image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/${randomNum1}.png`;
   image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${randomNum1}.png?raw=true`;
   return randomNum1;
 }
 function randomNumber2() {
   const randomNum2 = Math.floor(Math.random() * levelCount + 1);
-//   image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/${randomNum2}.png`;
   image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${randomNum2}.png?raw=true`;
   return randomNum2;
 }
 //GameSetの関数---------------------------------------------------------------------------------------
 function gameSet() {
   if (arrayMaster[0] === undefined) {
-    alert("おめでとう!");
+    alert("GameClear!");
   } else {
     alert("GameOver!");
   }
@@ -44,8 +42,6 @@ function checkNumber() {
   } else {
     num1 = Number(strNum1.value);
     num2 = Number(strNum2.value);
-//     image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/${num1}.png`;
-//     image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/${num2}.png`;
     image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${num1}.png?raw=true`;
     image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${num2}.png?raw=true`;
   }
@@ -110,8 +106,6 @@ function clickNumber(event) {
 function turnEnd() {
   strNum1.value = undefined;
   strNum2.value = undefined;
-//   image1.src = `C:/Users/1572016/Desktop/DIG講座/画像/nomal.png`;
-//   image2.src = `C:/Users/1572016/Desktop/DIG講座/画像/nomal.png`;
   image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/nomal.png?raw=true`;
   image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main/nomal.png?raw=true`;
   if (arrayMaster[0] === undefined) {
@@ -126,6 +120,7 @@ function turnEnd() {
 function modeSelect(event) {
   mode.style.display = "none";
   main.style.display = "block";
+  menuReturnM.style.display = "block";
   if (event.srcElement.id === "mode1") {
     level = 3;
   } else if (event.srcElement.id === "mode2") {
@@ -167,7 +162,16 @@ function modeSelect(event) {
     objM.push(objMaster[i]);
     arrayMaster.push(i + 1);
   }
-  console.log(arrayMaster);
+}
+//あそびかたの関数------------------------------------------------------------------------------
+function showRule() {
+  mode.style.display = "none";
+  menuReturnM.style.display = "block";
+  torisetu.style.display = "block";
+}
+//リセットの関数------------------------------------------------------------------------------
+function menuReturnFuc() {
+  window.location.reload();
 }
 //普通の処理------------------------------------------------------------------------------
 const arrays = document.querySelector("#box").innerText;
@@ -201,10 +205,16 @@ const image2 = document.querySelectorAll("img")[1];
 const mode1 = document.querySelector("#mode1");
 const mode2 = document.querySelector("#mode2");
 const mode3 = document.querySelector("#mode3");
+const rule = document.querySelector("#rule");
+const torisetu = document.querySelector("#torisetu");
+const menuReturn = document.querySelector("#return");
+const menuReturnM = document.querySelector(".return");
 const displayStrNum1 = strNum1.style.display;
 const displayStrNum2 = strNum1.style.display;
 strNum1.style.display = "none";
 strNum2.style.display = "none";
+torisetu.style.display = "none";
+menuReturnM.style.display = "none";
 let num1; 
 let num2; 
 let num;
@@ -225,3 +235,5 @@ mode2.addEventListener("click",modeSelect);
 mode3.addEventListener("click",modeSelect);
 target.addEventListener("click",checkNumber);
 targetDeveloper.addEventListener("click",developer);
+rule.addEventListener("click",showRule);
+menuReturn.addEventListener("click",menuReturnFuc);
