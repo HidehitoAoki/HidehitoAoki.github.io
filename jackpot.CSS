@@ -1,3 +1,7 @@
+/* 非表示------------------------------------------------------------------------------------------ */
+#main {
+  display: none;
+}
 /* 開発者モード------------------------------------------------------------------------------------------ */
 #developer {
   height: 25px;
@@ -71,7 +75,7 @@
   justify-content: space-evenly;
   height: 200px;
 }
-#One {
+#oneP {
   background-color: black;
   width: 200px;
   display:flex;/*【最重要(必須)】フレックスコンテナの指定 */
@@ -91,7 +95,7 @@
   justify-content: center;
   align-items: center;
 }
-#Two {
+#twoP {
   background-color: black;
   width: 200px;
   display: flex;
@@ -110,7 +114,7 @@
   justify-content: center;
   align-items: center;
 }
-#Three {
+#threeP {
   background-color: black;
   width: 200px;
   display: flex;
@@ -129,7 +133,7 @@
   justify-content: center;
   align-items: center;
 }
-#Four {
+#fourP {
   background-color: black;
   width: 200px;
   display: flex;
@@ -148,7 +152,7 @@
   justify-content: center;
   align-items: center;
 }
-#Five {
+#fiveP {
   background-color: black;
   width: 200px;
   display: flex;
@@ -167,14 +171,14 @@
   justify-content: center;
   align-items: center;
 }
-#Six {
+#sixP {
   background-color: black;
   width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#Seven {
+#six {
   background-color: gray;
   height: 70%;
   width: 50%;
@@ -186,14 +190,14 @@
   justify-content: center;
   align-items: center;
 }
-#Three {
+#sevenP {
   background-color: black;
   width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#three {
+#seven {
   background-color: gray;
   height: 70%;
   width: 50%;
@@ -205,14 +209,14 @@
   justify-content: center;
   align-items: center;
 }
-#Three {
+#eightP {
   background-color: black;
   width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#three {
+#eight {
   background-color: gray;
   height: 70%;
   width: 50%;
@@ -224,14 +228,14 @@
   justify-content: center;
   align-items: center;
 }
-#Three {
+#nineP {
   background-color: black;
   width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#three {
+#nine {
   background-color: gray;
   height: 70%;
   width: 50%;
