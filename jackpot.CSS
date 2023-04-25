@@ -1,12 +1,73 @@
+/* mode------------------------------------------------------------------------------------------ */
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  height: 200px;
+  font-size: 400%;
+}
+.mode1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+#mode1 {
+  width: 20%;
+  height: 70px;
+  background-color: lightgreen;
+  font-weight: bold;
+}
+.mode2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+#mode2 {
+  width: 20%;
+  height: 70px;
+  background-color: wheat;
+  font-weight: bold;
+}
+.mode3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+#mode3 {
+  width: 20%;
+  height: 70px;
+  background-color: pink;
+  font-weight: bold;
+}
+.rule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+#rule {
+  width: 20%;
+  height: 70px;
+  background-color: gainsboro;
+  font-weight: bold;
+}
 /* 非表示------------------------------------------------------------------------------------------ */
 #main {
   display: none;
+}
+/* 戻る------------------------------------------------------------------------------------------ */
+.return {
+  height: 50px;
 }
 /* 開発者モード------------------------------------------------------------------------------------------ */
 #developer {
   height: 25px;
   width: 25px;
-  background-color: pink;
+  background-color: white;
 }
 /* サイコロ------------------------------------------------------------------------------------------ */
 #numberBox {
@@ -19,8 +80,6 @@
 }
 /* サイコロ画像------------------------------------------------------------------------------------------ */
 #imageBox {
-  /* display: flex;
-  justify-content: space-evenly; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,17 +89,27 @@
   background-color: green;
   width: 400px;
   height: 200px;
-  display:flex;/*【最重要(必須)】フレックスコンテナの指定 */
-  justify-content:center;/*【重要】 (主軸に対して)子要素同士をどのような間隔で並べるかを指定するプロパティ */
-  align-items:center;/*flex-directionで並べる際に、交差軸に対して子要素同士をどのような間隔で並べるかを指定するプロパティ*/
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 #imageBoxM2 {
   background-color: green;
   width: 400px;
   height: 200px;
-  display:flex;/*【最重要(必須)】フレックスコンテナの指定 */
-  justify-content:center;/*【重要】 (主軸に対して)子要素同士をどのような間隔で並べるかを指定するプロパティ */
-  align-items:center;/*flex-directionで並べる際に、交差軸に対して子要素同士をどのような間隔で並べるかを指定するプロパティ*/
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+/* 取説------------------------------------------------------------------------------------------ */
+.torisetu {
+  display: flex;
+  justify-content: center;
+  height: 1000px;
+}
+#torisetu {
+  height: 1000px;
+  width: 1000px;
 }
 /* startボタン------------------------------------------------------------------------------------------ */
 #space {
