@@ -106,10 +106,11 @@
   display: flex;
   justify-content: center;
   height: 1000px;
+  width: 100%;
 }
 #torisetu {
-  height: 1000px;
-  width: 1000px;
+  height: 100%;
+  width: 50%;
 }
 /* startボタン------------------------------------------------------------------------------------------ */
 #space {
