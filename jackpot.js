@@ -13,15 +13,9 @@ function developer() {
   }
 }
 //ramdonナンバーを出す関数------------------------------------------------------------------------------
-function randomNumber1() {
-  const randomNum1 = Math.floor(Math.random() * levelCount + 1);
-  image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${randomNum1}.png?raw=true`;
-  return randomNum1;
-}
-function randomNumber2() {
-  const randomNum2 = Math.floor(Math.random() * levelCount + 1);
-  image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${randomNum2}.png?raw=true`;
-  return randomNum2;
+function randomNumber() {
+  num1 = Math.floor(Math.random() * levelCount + 1);
+  num2 = Math.floor(Math.random() * levelCount + 1);
 }
 //GameSetの関数---------------------------------------------------------------------------------------
 function gameSet() {
@@ -37,14 +31,13 @@ function gameSet() {
 function checkNumber() {
   target.removeEventListener('click',checkNumber);
   if (count === 0) {
-    num1 = randomNumber1();
-    num2 = randomNumber2();
+    randomNumber();
   } else {
     num1 = Number(strNum1.value);
     num2 = Number(strNum2.value);
-    image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${num1}.png?raw=true`;
-    image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${num2}.png?raw=true`;
   }
+  image1.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${num1}.png?raw=true`;
+  image2.src = `https://github.com/HidehitoAoki/HidehitoAoki.github.io/blob/main//${num2}.png?raw=true`;
   num = num1 + num2;
   index1 = (arrayMaster.indexOf(num1));
   index2 = (arrayMaster.indexOf(num2));
