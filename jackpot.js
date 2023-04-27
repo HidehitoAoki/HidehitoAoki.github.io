@@ -123,39 +123,19 @@ function modeSelect(event) {
   menuReturnM.style.display = "block";
   if (event.srcElement.id === "mode1") {
     level = 3;
+    levelCount = level;
+    message = ["す","て","き"];
   } else if (event.srcElement.id === "mode2") {
     level = 5;
+    levelCount = level;
+    message = ["F","N","D","1","6"];
   } else if (event.srcElement.id === "mode3") {
     level = 9;
-  }
-  if (level > 5) {
     levelCount = 6;
-  } else {
-    levelCount = level;
+    message = ["☆","J","A","C","K","P","O","T","☆"];
   }
   for (let i = 0 ; i < 9 - level ; i++) {
     objMasterP[8 - i].style.display = "none";
-  }
-  if (level === 3) {
-    message.push("す");
-    message.push("て");
-    message.push("き");
-  } else if (level === 5) {
-    message.push("F");
-    message.push("N");
-    message.push("D");
-    message.push("1");
-    message.push("6");
-  } else if (level === 9) {
-    message.push("☆");
-    message.push("J");
-    message.push("A");
-    message.push("C");
-    message.push("K");
-    message.push("P");
-    message.push("O");
-    message.push("T");
-    message.push("☆");
   }
   for (let i = 0 ; i < level ; i++) {
     obj.push(objMaster[i]);
@@ -229,7 +209,7 @@ const objMasterP = [oneP,twoP,threeP,fourP,fiveP,sixP,sevenP,eightP,nineP];
 const objMaster = [one,two,three,four,five,six,seven,eight,nine];
 const obj = [];
 const objM = [];
-const message = [];
+let message = [];
 mode1.addEventListener("click",modeSelect);
 mode2.addEventListener("click",modeSelect);
 mode3.addEventListener("click",modeSelect);
